@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Real Estate Advisors | Commercial Real Estate Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="images/logo.png" alt="Grand Real Estate Advisors" class="h-10 w-auto">
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#featured-listings" class="text-sm font-semibold text-slate-300 hover:text-white transition">Listings</a>
+                <a href="#tenant-rep" class="text-sm font-semibold text-slate-300 hover:text-white transition">Tenant Representation</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition shadow-lg shadow-blue-600/20">Contact Broker</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dynamic Hero Banner -->
+    <section class="relative bg-slate-900 border-b border-slate-800 overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+            <img src="images/hero-bg.png" alt="Twin Cities Commercial Real Estate" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+            <div class="max-w-3xl">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6">Twin Cities Commercial Real Estate</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Strategic Solutions. <br><span class="text-blue-500">Maximum Asset Value.</span>
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    Institutional-grade commercial real estate advisory, landlord representation, and tenant placement across the Minneapolis-St. Paul metropolitan area.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#featured-listings" class="inline-flex justify-center items-center px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-base rounded-lg shadow-lg shadow-blue-600/30 transition">View Available Properties</a>
+                    <a href="#tenant-rep" class="inline-flex justify-center items-center px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-semibold text-base rounded-lg border border-slate-700 transition">Tenant Representation Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Listings Grid -->
+    <main id="featured-listings" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex-grow">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Active Commercial Listings</h2>
+                <p class="text-slate-400 mt-2">Explore prime retail, office, and industrial properties across the metro area.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- 5770 Blackshire -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/5770_Blackshire.jpg" alt="5770 Blackshire Path" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Office Condo | For Sale / Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">5770 Blackshire Path</h3>
+                        <p class="text-slate-400 text-sm mt-1">Inver Grove Heights, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">2,464 SF</span>
+                        <a href="assets/5770_Blackshire.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1324 W 7th -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/1324_W_7th.jpg" alt="1324 W 7th Street" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Premier Retail | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">1324 W. 7th Street</h3>
+                        <p class="text-slate-400 text-sm mt-1">St. Paul, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">5,136 SF Divisible</span>
+                        <a href="assets/1324_W_7th.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 272 Snelling -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/272_Snelling.jpg" alt="272 Snelling Ave S" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Retail Space | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">272 Snelling Ave S</h3>
+                        <p class="text-slate-400 text-sm mt-1">St. Paul, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">1,369 SF</span>
+                        <a href="assets/272_Snelling.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 777 7th St E -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/777_7th_St_E.jpg" alt="777 7th Street E" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Retail / Office | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">777 7th Street E</h3>
+                        <p class="text-slate-400 text-sm mt-1">St. Paul, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">2,000 SF / 2 Floors</span>
+                        <a href="assets/777_7th_St_E.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2097 County Rd D -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/2097_County_Rd_D.jpg" alt="2097 County Road D East" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Office Condo | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">2097 County Rd D East</h3>
+                        <p class="text-slate-400 text-sm mt-1">Maplewood, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">1,040 SF</span>
+                        <a href="assets/2097_County_Rd_D.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2115 County Rd D -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/2115_County_Rd_D.jpg" alt="2115 County Road D East" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Office Condo | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">2115 County Rd D East</h3>
+                        <p class="text-slate-400 text-sm mt-1">Maplewood, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">1,070 SF</span>
+                        <a href="assets/2115_County_Rd_D.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2650 Nicollet Lease -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/2650_Nicollet_Lease.jpg" alt="2650 Nicollet Ave Lease" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Retail Condo | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">2650 Nicollet Ave</h3>
+                        <p class="text-slate-400 text-sm mt-1">Minneapolis, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">7,745 SF Turn-Key</span>
+                        <a href="assets/2650_Nicollet_Lease.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2650 Nicollet Sale -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/2650_Nicollet_Sale.jpg" alt="2650 Nicollet Ave Sale" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Retail Condo | For Sale</span>
+                        <h3 class="text-xl font-bold text-white mt-1">2650 Nicollet Ave</h3>
+                        <p class="text-slate-400 text-sm mt-1">Minneapolis, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">$1,749,000</span>
+                        <a href="assets/2650_Nicollet_Sale.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3035 White Bear -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/3035_White_Bear.jpg" alt="3035 White Bear Ave N" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Retail / Office | Sublease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">3035 White Bear Ave N</h3>
+                        <p class="text-slate-400 text-sm mt-1">Maplewood, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">2,064 SF End Cap</span>
+                        <a href="assets/3035_White_Bear.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3401 Hwy 55 -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/3401_Hwy_55.jpg" alt="3401 Highway 55" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Industrial Campus | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">3401 Highway 55</h3>
+                        <p class="text-slate-400 text-sm mt-1">Eagan, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">18,600 SF / 3.73 AC</span>
+                        <a href="assets/3401_Hwy_55.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4601 Westin Woods -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/4601_Westin_Woods.jpg" alt="4601 Westin Woods Pkwy" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Commercial Space | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">4601 Westin Woods Pkwy</h3>
+                        <p class="text-slate-400 text-sm mt-1">Oakdale, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Prime Medical / Office</span>
+                        <a href="assets/4601_Westin_Woods.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lumen on Lagoon -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/Lumen_on_Lagoon.jpg" alt="Lumen on Lagoon" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Uptown Retail | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Lumen on Lagoon</h3>
+                        <p class="text-slate-400 text-sm mt-1">Minneapolis, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">1221 W Lake St</span>
+                        <a href="assets/Lumen_on_Lagoon.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lyngblomsten Retail -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/Lyngblomsten_Retail.jpg" alt="Lyngblomsten Retail" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Retail Space | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Lyngblomsten Retail</h3>
+                        <p class="text-slate-400 text-sm mt-1">St. Paul, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">1415 Pascal St</span>
+                        <a href="assets/Lyngblomsten_Retail.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- McAndrews Center -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/McAndrews_Center.jpg" alt="McAndrews Center" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Retail Center | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">McAndrews Center</h3>
+                        <p class="text-slate-400 text-sm mt-1">Burnsville, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">1250 McAndrews Rd W</span>
+                        <a href="assets/McAndrews_Center.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Park Theater Place -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xl hover:border-slate-700 transition flex flex-col">
+                <div class="h-48 overflow-hidden bg-slate-800">
+                    <img src="images/Park_Theater_Place.jpg" alt="Park Theater Place" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Commercial Space | For Lease</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Park Theater Place</h3>
+                        <p class="text-slate-400 text-sm mt-1">St. Paul, MN</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">1589 Selby Ave</span>
+                        <a href="assets/Park_Theater_Place.pdf" target="_blank" class="text-sm font-semibold text-blue-400 hover:text-blue-300">View Brochure PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Tenant Representation CTA Section -->
+    <section id="tenant-rep" class="bg-slate-900 border-t border-slate-800 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-blue-900/50 to-slate-900 border border-blue-500/30 rounded-2xl p-8 sm:p-12">
+                <div class="max-w-3xl">
+                    <span class="text-blue-400 font-bold text-sm uppercase tracking-wider">Tenant Representation</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2">Looking for Space to Lease in the Twin Cities?</h2>
+                    <p class="text-slate-300 mt-4 text-lg">We represent business owners in lease negotiations, expansion, and submarket audits—at zero out-of-pocket cost to you (commission is paid by landlords).</p>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <a href="mailto:tlafave@grandrea.com?subject=Tenant%20Rep%20Inquiry" class="inline-flex justify-center items-center px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg shadow-lg shadow-blue-600/30 transition">Request a Free Submarket Audit</a>
+                        <a href="tel:6128753858" class="inline-flex justify-center items-center px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg border border-slate-700 transition">Call Direct: (612) 875-3858</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-950 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <img src="images/logo.png" alt="Grand Real Estate Advisors" class="h-8 w-auto">
+            </div>
+            <p class="text-slate-400 text-sm">Ted LaFave | 612.875.3858 | tlafave@grandrea.com</p>
+            <p class="text-slate-500 text-xs">&copy; 2026 Grand Real Estate Advisors. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
