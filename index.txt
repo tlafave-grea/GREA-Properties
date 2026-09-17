@@ -20,6 +20,7 @@
             </div>
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="#featured-listings" class="text-sm font-semibold text-slate-300 hover:text-white transition">Listings</a>
+                <a href="#about-broker" class="text-sm font-semibold text-slate-300 hover:text-white transition">About</a>
                 <a href="#tenant-rep" class="text-sm font-semibold text-slate-300 hover:text-white transition">Tenant Representation</a>
                 <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition shadow-lg shadow-blue-600/20">Contact Broker</a>
             </nav>
@@ -34,7 +35,9 @@
         <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
             <div class="max-w-3xl">
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6">Twin Cities Commercial Real Estate</span>
+                <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 tracking-wide">
+                    Grand Real Estate Advisors | St. Paul, Minnesota
+                </span>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
                     Strategic Solutions. <br><span class="text-blue-500">Maximum Asset Value.</span>
                 </h1>
@@ -44,6 +47,38 @@
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#featured-listings" class="inline-flex justify-center items-center px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-base rounded-lg shadow-lg shadow-blue-600/30 transition">View Available Properties</a>
                     <a href="#tenant-rep" class="inline-flex justify-center items-center px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-semibold text-base rounded-lg border border-slate-700 transition">Tenant Representation Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Broker / Personal Presence Section -->
+    <section id="about-broker" class="bg-slate-900 border-b border-slate-800 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl p-8 lg:p-12 shadow-2xl flex flex-col md:flex-row items-center gap-10">
+                <div class="w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden bg-slate-800 flex-shrink-0 border-2 border-blue-500/30 shadow-xl">
+                    <img src="images/ted-lafave.jpg" alt="Ted LaFave - Grand Real Estate Advisors" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-grow text-center md:text-left">
+                    <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Commercial Real Estate Advisor</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-1">Ted LaFave</h2>
+                    <p class="text-slate-400 text-sm font-medium mt-1">Grand Real Estate Advisors | St. Paul, MN</p>
+                    <p class="text-slate-300 mt-4 leading-relaxed text-base">
+                        Advising Twin Cities commercial property owners, tenants, and investors since 2007. Specializing in retail, office, and industrial landlord representation, tenant site selection, lease negotiations, and asset disposition.
+                    </p>
+                    <div class="mt-6 flex flex-wrap items-center justify-center md:justify-start gap-4">
+                        <a href="mailto:tlafave@grandrea.com" class="text-sm font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                            tlafave@grandrea.com
+                        </a>
+                        <span class="text-slate-700 hidden sm:inline">•</span>
+                        <a href="tel:6128753858" class="text-sm font-semibold text-slate-300 hover:text-white">
+                            (612) 875-3858
+                        </a>
+                        <span class="text-slate-700 hidden sm:inline">•</span>
+                        <a href="https://www.linkedin.com/in/ted-lafave-944a957/" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-400 hover:text-blue-300">
+                            Connect on LinkedIn &rarr;
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
