@@ -55,7 +55,7 @@
             <div class="mb-6">
                 <span class="text-brand-gold font-serif text-lg italic">Direct Access</span>
                 <h3 class="text-2xl font-serif text-white">Connect with Ted LaFave</h3>
-                <p class="text-xs text-slate-400 mt-1">Provide your details to initiate a confidential discussion regarding space or advisory services.</p>
+                <p class="text-xs text-slate-400 mt-1">Provide your details to initiate a confidential discussion regarding space, investment, or advisory services.</p>
             </div>
 
             <form onsubmit="sendSmsMessage(event)" class="space-y-5">
@@ -69,7 +69,7 @@
                 </div>
                 <div>
                     <label class="block text-xs uppercase tracking-widest text-brand-gold font-medium mb-1.5">Requirement Details</label>
-                    <textarea id="smsBody" rows="3" required placeholder="Requirement details or property inquiries..." class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition"></textarea>
+                    <textarea id="smsBody" rows="3" required placeholder="Requirement details, property inquiries, or advisory needs..." class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition"></textarea>
                 </div>
                 <button type="submit" class="w-full bg-brand-gold hover:bg-brand-goldLight text-black font-bold py-3.5 rounded-lg text-xs uppercase tracking-widest transition duration-300">
                     Submit Inquiry &rarr;
@@ -102,12 +102,12 @@
         
         <div class="relative max-w-7xl mx-auto px-6 sm:px-8 py-28 lg:py-36">
             <div class="max-w-3xl">
-                <span class="text-brand-gold font-serif italic text-xl tracking-wide block mb-3">Grand Real Estate Advisors</span>
+                <span class="text-brand-gold font-serif italic text-xl tracking-wide block mb-3">Grand Real Estate Advisors | St. Paul, Minnesota</span>
                 <h1 class="text-5xl sm:text-6xl lg:text-7xl font-serif text-white leading-none mb-8">
                     Bespoke Commercial <br><span class="italic text-brand-gold">Real Estate Solutions.</span>
                 </h1>
                 <p class="text-base sm:text-lg text-slate-400 font-light leading-relaxed mb-10 max-w-2xl">
-                    Institutional expertise meets personalized advisory. Unlocking strategic asset value and securing prime commercial space across the Twin Cities metro area.
+                    Principal-level commercial advisory, landlord representation, and tenant site selection across the Minneapolis-St. Paul metro area.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-5">
                     <a href="#featured-listings" class="inline-flex justify-center items-center px-8 py-4 bg-brand-gold hover:bg-brand-goldLight text-black font-semibold text-xs uppercase tracking-widest rounded-full shadow-2xl transition duration-300">View Selected Portfolio</a>
@@ -117,27 +117,67 @@
         </div>
     </section>
 
-    <!-- About Broker Section -->
-    <section id="about-broker" class="bg-brand-accent/50 border-b border-brand-border py-20">
+    <!-- About Broker & Comprehensive Bio Section -->
+    <section id="about-broker" class="bg-brand-accent/40 border-b border-brand-border py-20">
         <div class="max-w-7xl mx-auto px-6 sm:px-8">
-            <div class="bg-brand-card border border-brand-border rounded-3xl p-8 lg:p-14 shadow-2xl flex flex-col md:flex-row items-center gap-12">
-                <div class="w-52 h-52 md:w-64 md:h-64 rounded-2xl overflow-hidden bg-brand-bg flex-shrink-0 border border-brand-gold/30 shadow-2xl relative">
-                    <img src="images/ted-lafave.jpg" alt="Ted LaFave" class="w-full h-full object-cover">
+            <div class="bg-brand-card border border-brand-border rounded-3xl p-8 lg:p-14 shadow-2xl flex flex-col lg:flex-row items-center gap-12">
+                
+                <!-- Headshot & Quick Credential Badge -->
+                <div class="w-full lg:w-1/3 flex flex-col items-center text-center">
+                    <div class="w-56 h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden bg-brand-bg border border-brand-gold/30 shadow-2xl relative mb-6">
+                        <img src="images/ted-lafave.jpg" alt="Ted LaFave" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-serif text-white">Ted LaFave</h3>
+                    <p class="text-brand-gold text-xs uppercase tracking-widest font-semibold mt-1">Principal Advisor & Investor</p>
+                    <p class="text-slate-400 text-xs mt-1">St. Paul & Twin Cities Metro</p>
                 </div>
-                <div class="flex-grow text-center md:text-left">
-                    <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Principal Advisor</span>
-                    <h2 class="text-4xl font-serif text-white mt-1">Ted LaFave</h2>
-                    <p class="text-slate-400 text-xs uppercase tracking-wider mt-1">St. Paul & Twin Cities Metro</p>
-                    <p class="text-slate-300 mt-5 leading-relaxed text-sm sm:text-base font-light">
-                        Advising commercial property owners, tenants, and investors across the Minneapolis-St. Paul market since 2007. Delivering tailored strategies in landlord representation, tenant site selection, structured lease negotiations, and commercial acquisitions.
-                    </p>
-                    <div class="mt-8 flex flex-wrap items-center justify-center md:justify-start gap-6 text-xs font-semibold tracking-wider">
+
+                <!-- Narrative Bio -->
+                <div class="w-full lg:w-2/3">
+                    <span class="text-brand-gold font-serif text-xl italic">Proven Track Record</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif text-white mt-1 mb-6">Commercial Real Estate Advisory & Ownership</h2>
+                    
+                    <div class="space-y-4 text-slate-300 font-light leading-relaxed text-sm sm:text-base">
+                        <p>
+                            Advising property owners, tenants, and investors across the Twin Cities since 2007. Over a career spanning hundreds of millions of dollars in completed transaction volume, Ted provides a principal’s perspective to commercial advisory—derived from serving as an asset manager for the national Irving J. Sherman NNN retail portfolio, founding EJL Commercial Real Estate in 2010, and joining Grand Real Estate Advisors in 2018.
+                        </p>
+                        <p>
+                            Beyond advisory, Ted is an active commercial real estate owner with six properties in his current portfolio. Having bought, operated, and sold commercial assets firsthand, he brings real-world investor discipline to every lease negotiation, acquisition, and strategic consulting assignment.
+                        </p>
+                        <p class="text-slate-400 text-xs sm:text-sm italic border-l-2 border-brand-gold pl-4 py-1">
+                            A lifelong Minnesotan, Ted lives in St. Paul with his wife, Allison, and their five children: Sophie, Eddy, Wally, Mitt, and Lenny.
+                        </p>
+                    </div>
+
+                    <!-- Credential Metrics Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-6 border-t border-brand-border text-center lg:text-left">
+                        <div>
+                            <span class="text-2xl font-serif text-brand-gold block">$100M+</span>
+                            <span class="text-[10px] uppercase tracking-widest text-slate-400">Transaction Volume</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-serif text-brand-gold block">2007</span>
+                            <span class="text-[10px] uppercase tracking-widest text-slate-400">Metro Experience</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-serif text-brand-gold block">6</span>
+                            <span class="text-[10px] uppercase tracking-widest text-slate-400">Owned Properties</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-serif text-brand-gold block">St. Paul</span>
+                            <span class="text-[10px] uppercase tracking-widest text-slate-400">Local Principal</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Links -->
+                    <div class="mt-8 flex flex-wrap items-center gap-6 text-xs font-semibold tracking-wider uppercase">
                         <a href="mailto:tlafave@grandrea.com" class="text-brand-gold hover:underline">tlafave@grandrea.com</a>
                         <span class="text-slate-700 hidden sm:inline">|</span>
                         <a href="tel:6128753858" class="text-slate-300 hover:text-white">(612) 875-3858</a>
                         <span class="text-slate-700 hidden sm:inline">|</span>
                         <a href="https://www.linkedin.com/in/ted-lafave-8244a34" target="_blank" class="text-brand-gold hover:underline">LinkedIn Profile &rarr;</a>
                     </div>
+
                 </div>
             </div>
         </div>
