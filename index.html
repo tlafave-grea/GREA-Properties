@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand Real Estate Advisors | Boutique Commercial Advisory</title>
+    <title>Grand Real Estate Advisors | Commercial Real Estate Advisory</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        serif: ['Cormorant Garamond', 'serif'],
                         sans: ['Plus Jakarta Sans', 'sans-serif'],
                     },
                     colors: {
                         brand: {
-                            gold: '#C5A880',
-                            goldLight: '#E2D1A6',
-                            bg: '#0B0F12',
-                            card: '#13181D',
-                            border: '#222930',
-                            accent: '#1A2128'
+                            gold: '#B8860B',
+                            goldHover: '#996515',
+                            bg: '#0F172A',
+                            card: '#1E293B',
+                            border: '#334155',
+                            lightBg: '#F8FAFC'
                         }
                     }
                 }
@@ -29,49 +28,48 @@
         }
     </script>
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0B0F12; color: #E5E7EB; }
-        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0F172A; color: #F8FAFC; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased selection:bg-brand-gold selection:text-black">
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-gold selection:text-white">
 
     <!-- Floating Concierge SMS Widget -->
     <div class="fixed bottom-8 right-8 z-50">
         <button onclick="openChatModal()" 
-           class="flex items-center gap-3 bg-brand-gold hover:bg-brand-goldLight text-black font-semibold px-6 py-4 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 border border-amber-200/20">
+           class="flex items-center gap-3 bg-brand-gold hover:bg-brand-goldHover text-white font-bold px-6 py-4 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 border border-amber-300/30">
             <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-black"></span>
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
             </span>
-            <span class="text-xs uppercase tracking-widest font-bold">Inquire Directly</span>
+            <span class="text-xs uppercase tracking-widest">Text Ted Direct</span>
         </button>
     </div>
 
     <!-- On-Site Advisory Modal -->
-    <div id="chatModal" class="fixed inset-0 bg-black/90 backdrop-blur-xl z-50 hidden flex items-center justify-center p-4">
+    <div id="chatModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
         <div class="bg-brand-card border border-brand-border rounded-2xl max-w-md w-full p-8 shadow-2xl relative">
             <button onclick="closeChatModal()" class="absolute top-6 right-6 text-slate-400 hover:text-brand-gold text-2xl font-light">&times;</button>
             
             <div class="mb-6">
-                <span class="text-brand-gold font-serif text-lg italic">Direct Access</span>
-                <h3 class="text-2xl font-serif text-white">Connect with Ted LaFave</h3>
-                <p class="text-xs text-slate-400 mt-1">Provide your details to initiate a confidential discussion regarding space, investment, or advisory services.</p>
+                <span class="text-brand-gold text-sm font-semibold uppercase tracking-wider">Direct Access</span>
+                <h3 class="text-2xl font-bold text-white mt-1">Connect with Ted LaFave</h3>
+                <p class="text-xs text-slate-300 mt-1">Provide your details to initiate a confidential discussion regarding space, investment, or advisory services.</p>
             </div>
 
             <form onsubmit="sendSmsMessage(event)" class="space-y-5">
                 <div>
                     <label class="block text-xs uppercase tracking-widest text-brand-gold font-medium mb-1.5">Full Name</label>
-                    <input type="text" id="smsName" required placeholder="John Doe" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition">
+                    <input type="text" id="smsName" required placeholder="John Doe" class="w-full bg-slate-900 border border-brand-border rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition">
                 </div>
                 <div>
                     <label class="block text-xs uppercase tracking-widest text-brand-gold font-medium mb-1.5">Direct Mobile Phone</label>
-                    <input type="tel" id="smsPhone" required placeholder="(612) 555-0199" class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition">
+                    <input type="tel" id="smsPhone" required placeholder="(612) 555-0199" class="w-full bg-slate-900 border border-brand-border rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition">
                 </div>
                 <div>
                     <label class="block text-xs uppercase tracking-widest text-brand-gold font-medium mb-1.5">Requirement Details</label>
-                    <textarea id="smsBody" rows="3" required placeholder="Requirement details, property inquiries, or advisory needs..." class="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition"></textarea>
+                    <textarea id="smsBody" rows="3" required placeholder="Requirement details, property inquiries, or advisory needs..." class="w-full bg-slate-900 border border-brand-border rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-brand-gold hover:bg-brand-goldLight text-black font-bold py-3.5 rounded-lg text-xs uppercase tracking-widest transition duration-300">
+                <button type="submit" class="w-full bg-brand-gold hover:bg-brand-goldHover text-white font-bold py-3.5 rounded-lg text-xs uppercase tracking-widest transition duration-300">
                     Submit Inquiry &rarr;
                 </button>
             </form>
@@ -79,72 +77,73 @@
     </div>
 
     <!-- Navigation Bar -->
-    <header class="bg-brand-bg/90 backdrop-blur-xl border-b border-brand-border sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 h-24 flex items-center justify-between">
-            <div class="flex items-center space-x-4">
-                <img src="images/logo.png" alt="Grand Real Estate Advisors" class="h-10 w-auto filter brightness-110">
+    <header class="bg-brand-bg/95 backdrop-blur-xl border-b border-brand-border sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 h-28 flex items-center justify-between">
+            <div class="flex items-center py-2">
+                <!-- Enlarged Logo -->
+                <img src="images/logo.png" alt="Grand Real Estate Advisors" class="h-[60px] md:h-[72px] w-auto object-contain filter brightness-110">
             </div>
             <nav class="hidden md:flex items-center space-x-10">
-                <a href="#featured-listings" class="text-xs uppercase tracking-widest text-slate-300 hover:text-brand-gold font-medium transition">Portfolio</a>
-                <a href="#about-broker" class="text-xs uppercase tracking-widest text-slate-300 hover:text-brand-gold font-medium transition">Advisory</a>
-                <a href="#tenant-rep" class="text-xs uppercase tracking-widest text-slate-300 hover:text-brand-gold font-medium transition">Tenant Services</a>
-                <a href="tel:6128753858" class="border border-brand-gold/50 text-brand-gold hover:bg-brand-gold hover:text-black px-6 py-2.5 rounded-full font-semibold text-xs uppercase tracking-widest transition duration-300">Direct Call</a>
+                <a href="#featured-listings" class="text-xs uppercase tracking-widest text-slate-200 hover:text-brand-gold font-bold transition">Properties</a>
+                <a href="#about-broker" class="text-xs uppercase tracking-widest text-slate-200 hover:text-brand-gold font-bold transition">About Ted</a>
+                <a href="#tenant-rep" class="text-xs uppercase tracking-widest text-slate-200 hover:text-brand-gold font-bold transition">Tenant Services</a>
+                <a href="tel:6128753858" class="border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition duration-300">Direct Call</a>
             </nav>
         </div>
     </header>
 
-    <!-- Editorial Hero Section -->
+    <!-- Practical Hero Section -->
     <section class="relative bg-brand-bg border-b border-brand-border overflow-hidden">
-        <div class="absolute inset-0 opacity-25">
+        <div class="absolute inset-0 opacity-30">
             <img src="images/hero-bg.png" alt="Twin Cities Commercial Real Estate" class="w-full h-full object-cover">
         </div>
         <div class="absolute inset-0 bg-gradient-to-r from-brand-bg via-brand-bg/90 to-transparent"></div>
         
-        <div class="relative max-w-7xl mx-auto px-6 sm:px-8 py-28 lg:py-36">
+        <div class="relative max-w-7xl mx-auto px-6 sm:px-8 py-24 lg:py-32">
             <div class="max-w-3xl">
-                <span class="text-brand-gold font-serif italic text-xl tracking-wide block mb-3">Grand Real Estate Advisors | St. Paul, Minnesota</span>
-                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-serif text-white leading-none mb-8">
-                    Bespoke Commercial <br><span class="italic text-brand-gold">Real Estate Solutions.</span>
+                <span class="text-brand-gold font-bold text-xs uppercase tracking-widest block mb-3">Grand Real Estate Advisors | St. Paul, Minnesota</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Practical Real Estate Solutions. <br><span class="text-brand-gold">Hands-On Advisory.</span>
                 </h1>
-                <p class="text-base sm:text-lg text-slate-400 font-light leading-relaxed mb-10 max-w-2xl">
-                    Principal-level commercial advisory, landlord representation, and tenant site selection across the Minneapolis-St. Paul metro area.
+                <p class="text-base sm:text-lg text-slate-300 font-normal leading-relaxed mb-8 max-w-2xl">
+                    Accessible, experienced commercial advisory, landlord representation, and tenant site selection across the Minneapolis-St. Paul metro area.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-5">
-                    <a href="#featured-listings" class="inline-flex justify-center items-center px-8 py-4 bg-brand-gold hover:bg-brand-goldLight text-black font-semibold text-xs uppercase tracking-widest rounded-full shadow-2xl transition duration-300">View Selected Portfolio</a>
-                    <button onclick="openChatModal()" class="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-slate-700 hover:border-brand-gold text-white hover:text-brand-gold font-semibold text-xs uppercase tracking-widest rounded-full transition duration-300">Initiate Inquiry</button>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#featured-listings" class="inline-flex justify-center items-center px-8 py-4 bg-brand-gold hover:bg-brand-goldHover text-white font-bold text-xs uppercase tracking-widest rounded-full shadow-xl transition duration-300">View Available Properties</a>
+                    <button onclick="openChatModal()" class="inline-flex justify-center items-center px-8 py-4 bg-brand-card border border-brand-border hover:border-brand-gold text-white font-semibold text-xs uppercase tracking-widest rounded-full transition duration-300">Text Ted Direct</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Broker & Refined Bio Section -->
-    <section id="about-broker" class="bg-brand-accent/40 border-b border-brand-border py-20">
+    <section id="about-broker" class="bg-brand-card/60 border-b border-brand-border py-20">
         <div class="max-w-7xl mx-auto px-6 sm:px-8">
-            <div class="bg-brand-card border border-brand-border rounded-3xl p-8 lg:p-14 shadow-2xl flex flex-col lg:flex-row items-center gap-12">
+            <div class="bg-brand-card border border-brand-border rounded-3xl p-8 lg:p-14 shadow-xl flex flex-col lg:flex-row items-center gap-12">
                 
                 <!-- Headshot & Profile Info -->
                 <div class="w-full lg:w-1/3 flex flex-col items-center text-center">
-                    <div class="w-56 h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden bg-brand-bg border border-brand-gold/30 shadow-2xl relative mb-6">
+                    <div class="w-56 h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden bg-brand-bg border-2 border-brand-gold/40 shadow-xl relative mb-6">
                         <img src="images/ted-lafave.jpg" alt="Ted LaFave" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-3xl font-serif text-white">Ted LaFave</h3>
-                    <p class="text-brand-gold text-xs uppercase tracking-widest font-semibold mt-1">Principal Advisor & Investor</p>
-                    <p class="text-slate-400 text-xs mt-1">St. Paul & Twin Cities Metro</p>
+                    <h3 class="text-3xl font-extrabold text-white">Ted LaFave</h3>
+                    <p class="text-brand-gold text-xs uppercase tracking-widest font-bold mt-1">Principal Advisor & Investor</p>
+                    <p class="text-slate-300 text-xs font-medium mt-1">St. Paul & Twin Cities Metro</p>
                 </div>
 
                 <!-- Narrative Bio -->
                 <div class="w-full lg:w-2/3">
-                    <span class="text-brand-gold font-serif text-xl italic">Demonstrated Producer</span>
-                    <h2 class="text-3xl sm:text-4xl font-serif text-white mt-1 mb-6">Commercial Real Estate Advisory</h2>
+                    <span class="text-brand-gold font-bold text-xs uppercase tracking-widest block">At Your Service</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1 mb-6">Commercial Real Estate Advisory</h2>
                     
-                    <div class="space-y-4 text-slate-300 font-light leading-relaxed text-sm sm:text-base">
+                    <div class="space-y-4 text-slate-200 font-normal leading-relaxed text-sm sm:text-base">
                         <p>
                             Ted has been advising property owners, tenants, and investors since 2007, with deep brokerage transaction experience and long-standing partnerships within the St. Paul real estate community. Ted offers a steady, engaging, & highly personal approach to commercial representation.
                         </p>
                         <p>
                             As an active investor holding several local commercial properties, Ted evaluates every assignment through the lens of a principal. Having navigated property acquisition, operations, and disposition firsthand, he applies real-world owner-operator discipline to client negotiations, site selection, and strategic consulting.
                         </p>
-                        <p class="text-slate-400 text-xs sm:text-sm italic border-l-2 border-brand-gold pl-4 py-1">
+                        <p class="text-slate-300 text-xs sm:text-sm italic border-l-2 border-brand-gold pl-4 py-1">
                             A Minnesota native, Ted resides in St. Paul with his wife, Allison, and their five children.
                         </p>
                     </div>
@@ -152,22 +151,22 @@
                     <!-- Credential Badges -->
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-6 border-t border-brand-border text-center lg:text-left">
                         <div>
-                            <span class="text-base font-serif text-brand-gold block">Principal Owner Perspective</span>
+                            <span class="text-base font-bold text-brand-gold block">Principal Owner Perspective</span>
                         </div>
                         <div>
-                            <span class="text-base font-serif text-brand-gold block">National Portfolio Background</span>
+                            <span class="text-base font-bold text-brand-gold block">National Portfolio Background</span>
                         </div>
                         <div>
-                            <span class="text-base font-serif text-brand-gold block">Local Presence</span>
+                            <span class="text-base font-bold text-brand-gold block">Local Presence</span>
                         </div>
                     </div>
 
                     <!-- Action Links -->
-                    <div class="mt-8 flex flex-wrap items-center gap-6 text-xs font-semibold tracking-wider uppercase">
+                    <div class="mt-8 flex flex-wrap items-center gap-6 text-xs font-bold tracking-wider uppercase">
                         <a href="mailto:tlafave@grandrea.com" class="text-brand-gold hover:underline">tlafave@grandrea.com</a>
-                        <span class="text-slate-700 hidden sm:inline">|</span>
-                        <a href="tel:6128753858" class="text-slate-300 hover:text-white">(612) 875-3858</a>
-                        <span class="text-slate-700 hidden sm:inline">|</span>
+                        <span class="text-slate-500 hidden sm:inline">|</span>
+                        <a href="tel:6128753858" class="text-slate-200 hover:text-white">(612) 875-3858</a>
+                        <span class="text-slate-500 hidden sm:inline">|</span>
                         <a href="https://www.linkedin.com/in/ted-lafave-8244a34" target="_blank" class="text-brand-gold hover:underline">LinkedIn Profile &rarr;</a>
                     </div>
 
@@ -177,291 +176,291 @@
     </section>
 
     <!-- Portfolio Gallery -->
-    <main id="featured-listings" class="max-w-7xl mx-auto px-6 sm:px-8 py-24 flex-grow">
+    <main id="featured-listings" class="max-w-7xl mx-auto px-6 sm:px-8 py-20 flex-grow">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8 border-b border-brand-border pb-8">
             <div>
-                <span class="text-brand-gold font-serif text-lg italic">Curated Portfolio</span>
-                <h2 class="text-4xl font-serif text-white mt-1">Available Commercial Assets</h2>
+                <h2 class="text-4xl font-extrabold text-white mt-1">Available Properties</h2>
+                <p class="text-slate-300 text-sm mt-2">Explore active retail, office, and industrial space in the Twin Cities.</p>
             </div>
             
             <!-- Category Filters -->
             <div class="flex flex-wrap gap-2 bg-brand-card p-1.5 rounded-full border border-brand-border">
-                <button onclick="filterProperties('all')" class="filter-btn active-filter px-5 py-2 rounded-full text-xs font-bold tracking-wider transition bg-brand-gold text-black" data-filter="all">ALL</button>
-                <button onclick="filterProperties('retail')" class="filter-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider transition text-slate-400 hover:text-white" data-filter="retail">RETAIL</button>
-                <button onclick="filterProperties('office')" class="filter-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider transition text-slate-400 hover:text-white" data-filter="office">OFFICE</button>
-                <button onclick="filterProperties('industrial')" class="filter-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider transition text-slate-400 hover:text-white" data-filter="industrial">INDUSTRIAL</button>
-                <button onclick="filterProperties('sale')" class="filter-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider transition text-slate-400 hover:text-white" data-filter="sale">FOR SALE</button>
+                <button onclick="filterProperties('all')" class="filter-btn active-filter px-5 py-2 rounded-full text-xs font-bold tracking-wider transition bg-brand-gold text-white" data-filter="all">ALL</button>
+                <button onclick="filterProperties('retail')" class="filter-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider transition text-slate-300 hover:text-white" data-filter="retail">RETAIL</button>
+                <button onclick="filterProperties('office')" class="filter-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider transition text-slate-300 hover:text-white" data-filter="office">OFFICE</button>
+                <button onclick="filterProperties('industrial')" class="filter-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider transition text-slate-300 hover:text-white" data-filter="industrial">INDUSTRIAL</button>
+                <button onclick="filterProperties('sale')" class="filter-btn px-5 py-2 rounded-full text-xs font-bold tracking-wider transition text-slate-300 hover:text-white" data-filter="sale">FOR SALE</button>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <!-- 5770 Blackshire -->
-            <div class="property-card office sale bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/5770_Blackshire.jpg" alt="5770 Blackshire Path" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Office Condo</span>
+            <div class="property-card office sale bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/5770_Blackshire.jpg" alt="5770 Blackshire Path" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Office Condo</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">5770 Blackshire Path</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">Inver Grove Heights, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">5770 Blackshire Path</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">Inver Grove Heights, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">2,464 SF</span>
-                        <a href="assets/5770_Blackshire.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">2,464 SF</span>
+                        <a href="assets/5770_Blackshire.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- 1324 W 7th -->
-            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/1324_W_7th.jpg" alt="1324 W 7th Street" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Premier Retail</span>
+            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/1324_W_7th.jpg" alt="1324 W 7th Street" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Premier Retail</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">1324 W. 7th Street</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">St. Paul, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">1324 W. 7th Street</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">St. Paul, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">5,136 SF Divisible</span>
-                        <a href="assets/1324_W_7th.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">5,136 SF Divisible</span>
+                        <a href="assets/1324_W_7th.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- 272 Snelling -->
-            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/272_Snelling.jpg" alt="272 Snelling Ave S" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Prime Retail</span>
+            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/272_Snelling.jpg" alt="272 Snelling Ave S" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Prime Retail</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">272 Snelling Ave S</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">St. Paul, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">272 Snelling Ave S</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">St. Paul, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">1,369 SF</span>
-                        <a href="assets/272_Snelling.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">1,369 SF</span>
+                        <a href="assets/272_Snelling.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- 777 7th St E -->
-            <div class="property-card retail office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/777_7th_St_E.jpg" alt="777 7th Street E" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Retail / Office</span>
+            <div class="property-card retail office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/777_7th_St_E.jpg" alt="777 7th Street E" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Retail / Office</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">777 7th Street E</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">St. Paul, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">777 7th Street E</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">St. Paul, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">2,000 SF / 2 Fl.</span>
-                        <a href="assets/777_7th_St_E.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">2,000 SF / 2 Fl.</span>
+                        <a href="assets/777_7th_St_E.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- 2097 County Rd D -->
-            <div class="property-card office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/2097_County_Rd_D.jpg" alt="2097 County Road D East" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Office Condo</span>
+            <div class="property-card office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/2097_County_Rd_D.jpg" alt="2097 County Road D East" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Office Condo</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">2097 County Rd D East</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">Maplewood, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">2097 County Rd D East</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">Maplewood, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">1,040 SF</span>
-                        <a href="assets/2097_County_Rd_D.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">1,040 SF</span>
+                        <a href="assets/2097_County_Rd_D.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- 2115 County Rd D -->
-            <div class="property-card office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/2115_County_Rd_D.jpg" alt="2115 County Road D East" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Office Condo</span>
+            <div class="property-card office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/2115_County_Rd_D.jpg" alt="2115 County Road D East" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Office Condo</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">2115 County Rd D East</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">Maplewood, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">2115 County Rd D East</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">Maplewood, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">1,070 SF</span>
-                        <a href="assets/2115_County_Rd_D.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">1,070 SF</span>
+                        <a href="assets/2115_County_Rd_D.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- 2650 Nicollet Lease -->
-            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/2650_Nicollet_Lease.jpg" alt="2650 Nicollet Ave Lease" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Retail Condo</span>
+            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/2650_Nicollet_Lease.jpg" alt="2650 Nicollet Ave Lease" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Retail Condo</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">2650 Nicollet Ave</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">Minneapolis, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">2650 Nicollet Ave</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">Minneapolis, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">7,745 SF</span>
-                        <a href="assets/2650_Nicollet_Lease.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">7,745 SF</span>
+                        <a href="assets/2650_Nicollet_Lease.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- 2650 Nicollet Sale -->
-            <div class="property-card retail sale bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/2650_Nicollet_Sale.jpg" alt="2650 Nicollet Ave Sale" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">For Sale</span>
+            <div class="property-card retail sale bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/2650_Nicollet_Sale.jpg" alt="2650 Nicollet Ave Sale" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">For Sale</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">2650 Nicollet Ave</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">Minneapolis, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">2650 Nicollet Ave</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">Minneapolis, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
                         <span class="text-xs font-bold text-brand-gold">$1,749,000</span>
-                        <a href="assets/2650_Nicollet_Sale.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                        <a href="assets/2650_Nicollet_Sale.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- 3035 White Bear -->
-            <div class="property-card retail office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/3035_White_Bear.jpg" alt="3035 White Bear Ave N" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Sublease</span>
+            <div class="property-card retail office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/3035_White_Bear.jpg" alt="3035 White Bear Ave N" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Sublease</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">3035 White Bear Ave N</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">Maplewood, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">3035 White Bear Ave N</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">Maplewood, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">2,064 SF</span>
-                        <a href="assets/3035_White_Bear.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">2,064 SF</span>
+                        <a href="assets/3035_White_Bear.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- 3401 Hwy 55 -->
-            <div class="property-card industrial bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/3401_Hwy_55.jpg" alt="3401 Highway 55" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Industrial Campus</span>
+            <div class="property-card industrial bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/3401_Hwy_55.jpg" alt="3401 Highway 55" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Industrial Campus</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">3401 Highway 55</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">Eagan, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">3401 Highway 55</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">Eagan, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">18,600 SF / 3.73 AC</span>
-                        <a href="assets/3401_Hwy_55.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">18,600 SF / 3.73 AC</span>
+                        <a href="assets/3401_Hwy_55.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- 4601 Westin Woods -->
-            <div class="property-card office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/4601_Westin_Woods.jpg" alt="4601 Westin Woods Pkwy" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Medical / Office</span>
+            <div class="property-card office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/4601_Westin_Woods.jpg" alt="4601 Westin Woods Pkwy" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Medical / Office</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">4601 Westin Woods Pkwy</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">White Bear Lake Twp, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">4601 Westin Woods Pkwy</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">White Bear Lake Twp, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">Medical / Office</span>
-                        <a href="assets/4601_Westin_Woods.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">Medical / Office</span>
+                        <a href="assets/4601_Westin_Woods.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- Lumen on Lagoon -->
-            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/Lumen_on_Lagoon.jpg" alt="Lumen on Lagoon" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Uptown Retail</span>
+            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/Lumen_on_Lagoon.jpg" alt="Lumen on Lagoon" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Uptown Retail</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">Lumen on Lagoon</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">Minneapolis, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">Lumen on Lagoon</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">Minneapolis, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">1221 W Lake St</span>
-                        <a href="assets/Lumen_on_Lagoon.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">1221 W Lake St</span>
+                        <a href="assets/Lumen_on_Lagoon.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- Lyngblomsten Retail -->
-            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/Lyngblomsten_Retail.jpg" alt="Lyngblomsten Retail" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">New Retail</span>
+            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/Lyngblomsten_Retail.jpg" alt="Lyngblomsten Retail" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">New Retail</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">Lyngblomsten Retail</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">Lino Lakes, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">Lyngblomsten Retail</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">Lino Lakes, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">New Development</span>
-                        <a href="assets/Lyngblomsten_Retail.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">New Development</span>
+                        <a href="assets/Lyngblomsten_Retail.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- McAndrews Center -->
-            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/McAndrews_Center.jpg" alt="McAndrews Center" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Retail Center</span>
+            <div class="property-card retail bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/McAndrews_Center.jpg" alt="McAndrews Center" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Retail Center</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">McAndrews Center</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">Burnsville, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">McAndrews Center</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">Burnsville, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">14001 Grand Ave</span>
-                        <a href="assets/McAndrews_Center.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">14001 Grand Ave</span>
+                        <a href="assets/McAndrews_Center.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- Park Theater Place -->
-            <div class="property-card retail office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-2xl hover:border-brand-gold/40 transition duration-500 flex flex-col group">
-                <div class="h-64 overflow-hidden bg-black flex items-center justify-center p-4 relative">
-                    <img src="images/Park_Theater_Place.jpg" alt="Park Theater Place" class="max-h-full w-auto object-contain rounded transition duration-500 group-hover:scale-105">
-                    <span class="absolute bottom-4 left-4 bg-brand-bg/90 text-brand-gold border border-brand-gold/30 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Commercial Space</span>
+            <div class="property-card retail office bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-xl hover:border-brand-gold/60 transition duration-300 flex flex-col group">
+                <div class="h-64 overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative">
+                    <img src="images/Park_Theater_Place.jpg" alt="Park Theater Place" class="max-h-full w-auto object-contain rounded transition duration-300 group-hover:scale-105">
+                    <span class="absolute bottom-4 left-4 bg-brand-bg/95 text-brand-gold border border-brand-gold/40 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md backdrop-blur-md">Commercial Space</span>
                 </div>
-                <div class="p-8 flex-grow flex flex-col justify-between">
+                <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif text-white group-hover:text-brand-gold transition duration-300">Park Theater Place</h3>
-                        <p class="text-slate-400 text-xs tracking-wider uppercase mt-1">St. Louis Park, MN</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-gold transition duration-300">Park Theater Place</h3>
+                        <p class="text-slate-300 text-xs tracking-wider uppercase mt-1">St. Louis Park, MN</p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">4829 Minnetonka Blvd</span>
-                        <a href="assets/Park_Theater_Place.pdf" target="_blank" class="text-xs font-semibold text-brand-gold hover:text-brand-goldLight transition">Download Offering &rarr;</a>
+                    <div class="mt-6 pt-4 border-t border-brand-border flex items-center justify-between">
+                        <span class="text-xs text-slate-300 font-medium">4829 Minnetonka Blvd</span>
+                        <a href="assets/Park_Theater_Place.pdf" target="_blank" class="text-xs font-bold text-brand-gold hover:underline">Brochure PDF &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -470,17 +469,17 @@
     </main>
 
     <!-- Tenant Representation Advisory -->
-    <section id="tenant-rep" class="bg-brand-accent/40 border-t border-brand-border py-24">
+    <section id="tenant-rep" class="bg-brand-card/60 border-t border-brand-border py-20">
         <div class="max-w-7xl mx-auto px-6 sm:px-8">
-            <div class="bg-brand-card border border-brand-border rounded-3xl p-10 sm:p-16 shadow-2xl relative overflow-hidden">
+            <div class="bg-brand-card border border-brand-border rounded-3xl p-10 sm:p-14 shadow-xl relative overflow-hidden">
                 <div class="max-w-3xl relative z-10">
-                    <span class="text-brand-gold font-serif text-xl italic">Tenant Representation & Advisory</span>
-                    <h2 class="text-4xl font-serif text-white mt-2">Seeking Commercial Space in the Metro Area?</h2>
-                    <p class="text-slate-300 mt-5 text-base sm:text-lg font-light leading-relaxed">
+                    <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Tenant Representation & Advisory</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Seeking Commercial Space in the Metro Area?</h2>
+                    <p class="text-slate-200 mt-4 text-base sm:text-lg font-normal leading-relaxed">
                         GREA represents business owners seeking commercial space across the Twin Cities Metro. Deep market knowledge and leasing expertise dating to 2007. Contact us to discuss your requirements in confidence.
                     </p>
                     
-                    <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs font-semibold tracking-wider text-slate-300 uppercase">
+                    <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs font-bold tracking-wider text-slate-200 uppercase">
                         <div class="flex items-center space-x-2.5"><span class="text-brand-gold">•</span><span>New Space Search</span></div>
                         <div class="flex items-center space-x-2.5"><span class="text-brand-gold">•</span><span>Lease Negotiations</span></div>
                         <div class="flex items-center space-x-2.5"><span class="text-brand-gold">•</span><span>Renewals & Expansions</span></div>
@@ -488,9 +487,9 @@
                         <div class="flex items-center space-x-2.5"><span class="text-brand-gold">•</span><span>Strategic Consulting</span></div>
                     </div>
 
-                    <div class="mt-10 flex flex-col sm:flex-row gap-5">
-                        <button onclick="openChatModal()" class="inline-flex justify-center items-center px-8 py-4 bg-brand-gold hover:bg-brand-goldLight text-black font-semibold text-xs uppercase tracking-widest rounded-full transition duration-300">Confidential Inquiry</button>
-                        <a href="tel:6128753858" class="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-slate-700 hover:border-brand-gold text-white hover:text-brand-gold font-semibold text-xs uppercase tracking-widest rounded-full transition duration-300">Call Direct: (612) 875-3858</a>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                        <button onclick="openChatModal()" class="inline-flex justify-center items-center px-8 py-4 bg-brand-gold hover:bg-brand-goldHover text-white font-bold text-xs uppercase tracking-widest rounded-full transition duration-300 shadow-lg">Confidential Inquiry</button>
+                        <a href="tel:6128753858" class="inline-flex justify-center items-center px-8 py-4 bg-slate-900 border border-brand-border hover:border-brand-gold text-white font-semibold text-xs uppercase tracking-widest rounded-full transition duration-300">Call Direct: (612) 875-3858</a>
                     </div>
                 </div>
             </div>
@@ -498,16 +497,16 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-brand-bg border-t border-brand-border py-14">
+    <footer id="contact" class="bg-brand-bg border-t border-brand-border py-12">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div class="flex items-center space-x-4">
-                <img src="images/logo.png" alt="Grand Real Estate Advisors" class="h-8 w-auto filter brightness-110">
+            <div class="flex items-center py-1">
+                <img src="images/logo.png" alt="Grand Real Estate Advisors" class="h-12 w-auto object-contain filter brightness-110">
             </div>
-            <div class="flex flex-col sm:flex-row items-center gap-6 text-slate-400 text-xs tracking-wider uppercase font-medium">
+            <div class="flex flex-col sm:flex-row items-center gap-6 text-slate-300 text-xs tracking-wider uppercase font-semibold">
                 <span>Ted LaFave | 612.875.3858 | tlafave@grandrea.com</span>
                 <a href="https://www.linkedin.com/in/ted-lafave-8244a34" target="_blank" class="text-brand-gold hover:underline">LinkedIn &rarr;</a>
             </div>
-            <p class="text-slate-600 text-xs font-light">&copy; 2026 Grand Real Estate Advisors. All rights reserved.</p>
+            <p class="text-slate-400 text-xs font-normal">&copy; 2026 Grand Real Estate Advisors. All rights reserved.</p>
         </div>
     </footer>
 
@@ -519,11 +518,11 @@
 
             buttons.forEach(btn => {
                 if (btn.getAttribute('data-filter') === category) {
-                    btn.classList.add('bg-brand-gold', 'text-black');
-                    btn.classList.remove('text-slate-400');
+                    btn.classList.add('bg-brand-gold', 'text-white');
+                    btn.classList.remove('text-slate-300');
                 } else {
-                    btn.classList.remove('bg-brand-gold', 'text-black');
-                    btn.classList.add('text-slate-400');
+                    btn.classList.remove('bg-brand-gold', 'text-white');
+                    btn.classList.add('text-slate-300');
                 }
             });
 
